@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Mahasiswa Kreatif</title>
+    <style>
+        body {
+            background-image: url('itpln.jpeg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label, input, select {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Formulir Mahasiswa</h2>
+        <form id="studentForm">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="nim">NIM:</label>
+            <input type="text" id="nim" name="nim" required>
+
+            <label for="jurusan">Jurusan:</label>
+            <select id="jurusan" name="jurusan" required>
+                <option value="">--Pilih Jurusan--</option>
+                <option value="Informatika">Informatika</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+            </select>
+
+            <label for="hobi">Hobi:</label>
+            <input type="text" id="hobi" name="hobi" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('studentForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah form refresh halaman
+            
+          
+            window.location.href = "submit.html"; // Ganti submit.html dengan halaman yang diinginkan
+        });
+    </script>
+  
+</body>
+</html>
